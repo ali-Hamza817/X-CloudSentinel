@@ -70,9 +70,13 @@ def index():
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({
-        "status": "ok",
+        "status": "active",
+        "service": "X-CloudSentinel-AI",
         "model_loaded": os.path.exists(MODEL_PATH),
-        "timestamp": time.time()
+        "gnn_loaded": os.path.exists(GNN_MODEL_PATH),
+        "ner_loaded": os.path.exists(NER_MODEL_PATH),
+        "timestamp": time.time(),
+        "mode": "Production"
     })
 
 @app.route('/analyze', methods=['POST'])

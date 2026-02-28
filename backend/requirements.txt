@@ -10,3 +10,5 @@ datasets
 tqdm
 python-dotenv
 accelerate
+gunicorn
+uvicorn

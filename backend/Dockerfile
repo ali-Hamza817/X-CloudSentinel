@@ -25,6 +25,7 @@ ENV MODEL_PATH=/app/models/X-CloudSentinel-distilbert
 
 EXPOSE 7860
 
-# Start Flask app on port 7860
-CMD ["flask", "run", "--host=0.0.0.0", "--port=7860"]
+# Start Flask app using Gunicorn for production performance
+# 4 workers, timeout 120s to handle large models
+CMD ["gunicorn", "--bind", "0.0.0.0:7860", "--workers", "4", "--timeout", "120", "app:app"]
 
