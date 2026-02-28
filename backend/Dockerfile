@@ -23,8 +23,8 @@ ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV MODEL_PATH=/app/models/X-CloudSentinel-distilbert
 
-EXPOSE 5000
+EXPOSE 7860
 
-# Start Flask app
-CMD ["flask", "run"]
+# Start Flask app on port 7860
+CMD ["flask", "run", "--host=0.0.0.0", "--port=7860"]
 

@@ -58,8 +58,8 @@
       "properties": {
         "X-CloudSentinel.backendUrl": {
           "type": "string",
-          "default": "http://127.0.0.1:5000",
-          "description": "URL of the X-CloudSentinel AI backend server"
+          "default": "https://YOUR_HF_USERNAME-X-CloudSentinel.hf.space",
+          "description": "URL of the X-CloudSentinel AI backend server (Hugging Face Space URL)"
         },
         "X-CloudSentinel.apiKey": {
           "type": "string",
