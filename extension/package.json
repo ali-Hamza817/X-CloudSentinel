@@ -1,5 +1,5 @@
 {
-  "name": "X-CloudSentinel",
+  "name": "x-cloudsentinel",
   "displayName": "X-CloudSentinel",
   "description": "AI-powered cloud security analysis, secret leakage detection, and IaC misconfiguration scanning with Security Quality Index (SQI)",
   "version": "0.1.0",
@@ -61,6 +61,11 @@
           "default": "http://127.0.0.1:5000",
           "description": "URL of the X-CloudSentinel AI backend server"
         },
+        "X-CloudSentinel.apiKey": {
+          "type": "string",
+          "default": "X-CloudSentinel-Research-2026",
+          "description": "API Key for authenticating with the X-CloudSentinel backend"
+        },
         "X-CloudSentinel.enableAI": {
           "type": "boolean",
           "default": true,
@@ -100,7 +105,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/X-CloudSentinel/X-CloudSentinel-vscode"
+    "url": "https://github.com/ali-Hamza817/X-CloudSentinel.git"
   },
   "keybindings": [
     {

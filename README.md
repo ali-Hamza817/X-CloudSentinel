@@ -1,15 +1,18 @@
-# X-CloudSentinel — AI-Powered Cloud Security Extension
+# 🛡️ X-CloudSentinel
+### Explainable Cloud Soldier Guard: AI-Native Security for DevSecOps
 
-X-CloudSentinel is a powerful VS Code extension designed to bring the **Shift-Left** security paradigm to your DevSecOps workflow. It provides real-time analysis of Infrastructure-as-Code (IaC), secrets, and IAM policies using a combination of high-speed static analysis and advanced AI classification.
+**X-CloudSentinel** is a research-grade VS Code extension that provides SOTA AI-powered cloud security analysis, secret leakage detection, and IaC misconfiguration scanning.
 
-![Dashboard Preview](https://raw.githubusercontent.com/username/X-CloudSentinel/main/media/preview.png)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-X--CloudSentinel-blue?logo=github)](https://github.com/ali-Hamza817/X-CloudSentinel)
+
+---
 
 ## 🚀 Key Features
-
-- **Multi-Engine Static Analysis**: Detects over 50+ security patterns in Terraform, Kubernetes, Docker, and AWS IAM.
-- **AI Classification**: Uses a fine-tuned **DistilBERT** model to categorize security risks into 4 severity classes.
-- **Explainable AI (SHAP)**: Understand *why* a piece of code was flagged with token-level highlights.
-- **Security Quality Index (SQI)**: A holistic security metric (0-100) that weights different risk factors automatically.
+- **GNN-Powered Relational Scan**: Detects transitive vulnerabilities in Terraform/K8s graphs.
+- **Contextual BERT-NER Secrets**: Distinguishes credentials from random tokens using usage context.
+- **Explainable AI (SHAP)**: Provides mathematical justification for every risk classification.
+- **Security Quality Index (SQI)**: A novel, data-driven metric for quantifying project risk.
+- **Agentic Reasoning**: Autonomous risk propagation and remediation prioritization.
 - **Real-time Diagnostics**: Get inline warnings with remediation steps as you type.
 - **Interactive Dashboard**: A premium, dark-themed dashboard to visualize your overall security posture.
 

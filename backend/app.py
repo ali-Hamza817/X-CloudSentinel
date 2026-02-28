@@ -11,8 +11,21 @@ from src.agentic_layers import SentinelSQIMaximizationAgent
 import time
 import os
 
+from functools import wraps
+
 app = Flask(__name__)
 CORS(app)
+
+# API Security Configuration
+X_CLOUDSENTINEL_API_KEY = os.environ.get("X_CLOUDSENTINEL_API_KEY", "X-CloudSentinel-Research-2026")
+
+def require_api_key(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if request.headers.get('X-API-KEY') != X_CLOUDSENTINEL_API_KEY:
+            return jsonify({"error": "Unauthorized access. Invalid API Key."}), 401
+        return f(*args, **kwargs)
+    return decorated_function
 
 # Initialize DB on startup
 init_db()
@@ -35,7 +48,7 @@ sqi_agent = SentinelSQIMaximizationAgent()
 @app.route('/', methods=['GET'])
 def index():
     return jsonify({
-        "message": "Welcome to X-CloudSentinel AI Backend",
+        "message": "Welcome to X-CloudSentinel AI Backend (Secure Mode)",
         "version": "1.0.0",
         "endpoints": ["/health", "/analyze", "/explain", "/history", "/remediate"]
     })
@@ -49,6 +62,7 @@ def health():
     })
 
 @app.route('/analyze', methods=['POST'])
+@require_api_key
 def analyze():
     data = request.json
     if not data or 'text' not in data:
@@ -71,6 +85,7 @@ def analyze():
     return jsonify(result)
 
 @app.route('/analyze-advanced', methods=['POST'])
+@require_api_key
 def analyze_advanced():
     """Phase 6: Advanced SOTA Analysis covering GNN and BERT-NER"""
     try:
@@ -132,11 +147,13 @@ def analyze_advanced():
         return jsonify({"error": str(e)}), 500
 
 @app.route('/history', methods=['GET'])
+@require_api_key
 def history():
     limit = request.args.get('limit', 50, type=int)
     return jsonify(get_history(limit))
 
 @app.route('/explain', methods=['POST'])
+@require_api_key
 def explain():
     data = request.json
     if not data or 'text' not in data:
@@ -148,6 +165,7 @@ def explain():
     return jsonify(explanation)
 
 @app.route('/remediate', methods=['POST'])
+@require_api_key
 def remediate():
     global remediator
     data = request.json
