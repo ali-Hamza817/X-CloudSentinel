@@ -1,0 +1,4002 @@
+[
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 934",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 837",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 750",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 542",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 834",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 800",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 928",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 102",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 474",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 417",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 830",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 764",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 778",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 421",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 38",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 695",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 712",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 66",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 462",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 175",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 503",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 992",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 955",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 923",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 657",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 447",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 237",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 326",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 998",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 603",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 541",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 790",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 310",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 891",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 866",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 770",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 92",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 696",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 876",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 543",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 152",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 274",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 107",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 711",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 943",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 109",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 442",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 300",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 750",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 87",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 823",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 635",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 782",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 870",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 657",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 248",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 489",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 302",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 589",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 835",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 657",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 437",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 210",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 517",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 421",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 317",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 946",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 533",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 420",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 514",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 532",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 853",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 612",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 57",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 75",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 992",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 562",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 594",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 473",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 486",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 58",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 400",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 704",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 501",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 669",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 122",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 716",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 792",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 1",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 838",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 521",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 616",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 666",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 370",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 13",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 624",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 215",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 776",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 681",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 953",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 28",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 921",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 153",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 225",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 471",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 146",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 777",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 663",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 592",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 262",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 523",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 972",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 64",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 317",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 480",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 832",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 808",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 281",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 98",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 451",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 257",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 120",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 170",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 469",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 540",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 379",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 376",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 921",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 78",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 854",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 299",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 259",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 923",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 487",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 602",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 785",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 60",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 458",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 928",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 236",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 400",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 186",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 698",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 875",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 805",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 648",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 955",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 658",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 462",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 42",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 252",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 186",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 70",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 864",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 87",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 981",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 81",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 435",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 261",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 219",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 963",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 164",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 278",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 936",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 747",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 634",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 908",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 54",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 607",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 483",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 299",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 688",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 705",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 69",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 815",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 975",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 248",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 345",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 944",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 948",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 153",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 774",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 520",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 349",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 672",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 156",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 529",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 425",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 473",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 408",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 506",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 876",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 873",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 618",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 188",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 909",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 601",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 331",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 474",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 604",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 260",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 831",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 272",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 503",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 652",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 959",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 233",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 259",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 850",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 636",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 981",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 168",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 608",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 832",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 380",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 269",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 727",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 865",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 321",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 738",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 443",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 989",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 299",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 891",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 999",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 434",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 41",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 611",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 362",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 862",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 450",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 654",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 470",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 490",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 310",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 217",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 367",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 1000",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 663",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 390",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 544",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 669",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 87",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 392",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 749",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 887",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 960",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 908",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 58",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 330",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 251",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 34",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 415",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 561",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 720",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 162",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 618",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 270",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 556",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 758",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 280",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 346",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 65",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 292",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 557",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 163",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 451",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 213",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 590",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 939",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 665",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 632",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 939",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 374",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 558",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 111",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 503",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 522",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 674",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 497",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 167",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 717",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 343",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 660",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 372",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 813",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 131",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 770",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 963",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 263",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 773",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 783",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 825",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 679",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 423",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 1",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 352",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 152",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 203",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 781",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 837",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 184",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 287",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 126",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 578",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 443",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 71",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 616",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 868",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 496",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 371",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 380",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 717",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 632",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 131",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 311",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 967",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 536",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 281",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 704",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 100",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 414",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 154",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 803",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 371",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 393",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 159",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 436",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 753",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 950",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 593",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 338",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 441",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 941",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 899",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 787",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 163",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 196",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 16",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 708",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 194",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 766",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 452",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 514",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 842",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 471",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 302",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 342",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 635",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 278",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 810",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 575",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 812",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 401",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 876",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 205",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 471",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 221",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 582",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 101",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 964",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 484",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 62",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 459",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 833",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 44",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 152",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 335",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 895",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 634",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 193",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 429",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 971",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 310",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 820",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 723",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 322",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 43",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 677",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 9",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 130",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 721",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 593",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 136",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 742",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 142",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 561",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 169",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 177",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 252",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 542",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 450",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 276",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 384",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 844",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 957",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 450",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 164",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 431",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 177",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 394",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 635",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 129",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 228",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 68",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 619",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 478",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 137",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 896",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 570",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 349",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 289",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 458",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 803",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 871",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 628",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 433",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 646",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 996",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 967",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 619",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 78",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 594",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 869",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 546",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 166",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 964",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 707",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 27",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 511",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 569",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 70",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 138",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 495",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 527",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 989",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 824",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 107",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 151",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 515",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 509",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 595",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 108",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 168",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 824",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 738",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 393",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 214",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 562",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 407",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 341",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 365",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 79",
+    "label": "HighRisk"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 737",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 235",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 207",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 355",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 900",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 102",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 190",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 880",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 767",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 372",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 54",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 279",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 442",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 818",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 107",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 696",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 422",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 571",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 621",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 366",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 324",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 26",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 125",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 141",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 539",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 306",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 893",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 244",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 288",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 318",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 846",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 568",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 226",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 561",
+    "label": "HighRisk"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 285",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 896",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 902",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = false\n  publicly_accessible = true\n} # Comment 910",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 389",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 792",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 842",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true",
+    "label": "HighRisk"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 77",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 359",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 230",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 912",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 367",
+    "label": "Secure"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\" # Comment 321",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 674",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 888",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 959",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 875",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 804",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n} # Comment 386",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 448",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app # Comment 513",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\" # Comment 910",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 686",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\" # Comment 565",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"secure\" {\n  bucket = \"my-data\"\n  acl = \"private\"\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 695",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 619",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_access_key = \"AKIA1234567890ABCDEF\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n} # Comment 639",
+    "label": "Secure"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false",
+    "label": "Secure"
+  },
+  {
+    "text": "aws_secret_key = \"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 126",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n}",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 539",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 269",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 648",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: false # Comment 736",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app # Comment 17",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"risk\" {\n  bucket = \"data\"\n  access_key = \"AKIA123...\"\n  acl = \"public-read\"\n} # Comment 222",
+    "label": "HighRisk"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo # Comment 74",
+    "label": "HighRisk"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n} # Comment 91",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "connection_string = \"postgres://admin:password123@db.example.com:5432\" # Comment 157",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  containers:\n  - name: app\n    securityContext:\n      privileged: true # Comment 663",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "FROM node:18-alpine\nUSER node\nCOPY . /app",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 944",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "export GITHUB_TOKEN=\"ghp_1234567890abcdefghijklmnopqrstuv\" # Comment 808",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "FROM ubuntu\nENV PASSWORD=root\nRUN apt-get update && apt-get install sudo",
+    "label": "HighRisk"
+  },
+  {
+    "text": "\"password\": \"SuP3rS3cr3t!\"",
+    "label": "SecretLeakage"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n} # Comment 130",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "apiVersion: v1\nkind: Pod\nspec:\n  hostNetwork: true\n  containers:\n  - name: root\n    env:\n    - name: SECRET\n      value: \"123456\"\n    securityContext:\n      privileged: true # Comment 560",
+    "label": "HighRisk"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "FROM node:latest\nUSER root\nADD . /app",
+    "label": "Misconfigured"
+  },
+  {
+    "text": "resource \"aws_db_instance\" \"db\" {\n  storage_encrypted = true\n  publicly_accessible = false\n}",
+    "label": "Secure"
+  },
+  {
+    "text": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::mybucket/*\"\n    }\n  ]\n} # Comment 265",
+    "label": "Secure"
+  },
+  {
+    "text": "resource \"aws_s3_bucket\" \"insecure\" {\n  bucket = \"my-data\"\n  acl = \"public-read\"\n}",
+    "label": "Misconfigured"
+  }
+]

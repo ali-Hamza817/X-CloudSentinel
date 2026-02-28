@@ -1,0 +1,114 @@
+{
+  "name": "X-CloudSentinel",
+  "displayName": "X-CloudSentinel",
+  "description": "AI-powered cloud security analysis, secret leakage detection, and IaC misconfiguration scanning with Security Quality Index (SQI)",
+  "version": "0.1.0",
+  "publisher": "X-CloudSentinel",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "security",
+    "cloud",
+    "terraform",
+    "kubernetes",
+    "docker",
+    "iac",
+    "devsecops",
+    "secrets",
+    "misconfiguration"
+  ],
+  "activationEvents": [
+    "onLanguage:terraform",
+    "onLanguage:yaml",
+    "onLanguage:dockerfile",
+    "onLanguage:json",
+    "onLanguage:plaintext"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "X-CloudSentinel.scan",
+        "title": "X-CloudSentinel: Scan Current File"
+      },
+      {
+        "command": "X-CloudSentinel.scanWorkspace",
+        "title": "X-CloudSentinel: Scan Workspace"
+      },
+      {
+        "command": "X-CloudSentinel.showDashboard",
+        "title": "X-CloudSentinel: Show Security Dashboard"
+      },
+      {
+        "command": "X-CloudSentinel.exportReport",
+        "title": "X-CloudSentinel: Export Security Report (JSON)"
+      },
+      {
+        "command": "X-CloudSentinel.advancedScan",
+        "title": "X-CloudSentinel: Run Advanced Research Scan (SOTA)"
+      }
+    ],
+    "configuration": {
+      "title": "X-CloudSentinel",
+      "properties": {
+        "X-CloudSentinel.backendUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:5000",
+          "description": "URL of the X-CloudSentinel AI backend server"
+        },
+        "X-CloudSentinel.enableAI": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered classification (requires backend running)"
+        },
+        "X-CloudSentinel.scanOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically scan files on save"
+        },
+        "X-CloudSentinel.severityThreshold": {
+          "type": "string",
+          "default": "low",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "Minimum severity level to report"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.50.0",
+    "typescript": "^5.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/X-CloudSentinel/X-CloudSentinel-vscode"
+  },
+  "keybindings": [
+    {
+      "command": "X-CloudSentinel.advancedScan",
+      "key": "ctrl+shift+a",
+      "mac": "cmd+shift+a",
+      "when": "editorTextFocus"
+    }
+  ]
+}
+

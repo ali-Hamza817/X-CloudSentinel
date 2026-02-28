@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+      - ./backend/models:/app/models
+    environment:
+      - USE_GPU=false
+      - SECRET_KEY=X-CloudSentinel-prod-secret
+    restart: always
+
+  # Optional: For future async processing
+  # redis:
+  #   image: redis:alpine
+  #   ports:
+  #     - "6379:6379"
+

@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+.env/
+bin/
+lib/
+share/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# AI Models & Large Binaries (Too large for GitHub)
+backend/models/checkpoints/
+backend/models/ner_checkpoints/
+backend/models/*.pt
+backend/models/x-cloudsentinel-ner/
+backend/models/x-cloudsentinel-distilbert/
+backend/data/*.db
+backend.log
+training.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+out/
+dist/
+*.vsix

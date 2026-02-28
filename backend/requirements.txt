@@ -1,0 +1,12 @@
+flask
+flask-cors
+torch
+transformers
+shap
+scikit-learn
+pandas
+numpy
+datasets
+tqdm
+python-dotenv
+accelerate

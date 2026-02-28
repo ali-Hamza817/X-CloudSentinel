@@ -1,0 +1,51 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "FullAdminAccess",
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "BroadS3Access",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "PublicAccess",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::*/*"
+        },
+        {
+            "Sid": "InverseAllow",
+            "Effect": "Allow",
+            "NotAction": [
+                "iam:CreateUser",
+                "iam:DeleteUser"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "PassRoleUnrestricted",
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole",
+                "sts:AssumeRole"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "BroadEC2Access",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        }
+    ]
+}

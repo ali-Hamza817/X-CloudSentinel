@@ -1,0 +1,90 @@
+# =============================================================================
+# X-CloudSentinel Test Sample: INSECURE Kubernetes YAML
+# This file contains INTENTIONAL security misconfigurations for testing
+# DO NOT deploy to any cluster!
+# =============================================================================
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insecure-app
+  namespace: default
+  labels:
+    app: insecure-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: insecure-app
+  template:
+    metadata:
+      labels:
+        app: insecure-app
+    spec:
+      # SIQ-K8S-003: Host network enabled
+      hostNetwork: true
+      # SIQ-K8S-004: Host PID namespace shared
+      hostPID: true
+      containers:
+        - name: insecure-container
+          # SIQ-K8S-008: No resource limits defined
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          env:
+            # SIQ-K8S-006: Hardcoded secrets in environment variables
+            - name: DB_PASSWORD
+              value: "my-super-secret-database-password"
+            - name: API_KEY
+              value: "sk-abcdef1234567890secretkey"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+            - name: DATABASE_URL
+              value: "postgres://admin:password123@db.internal:5432/prod"
+            - name: APP_ENV
+              value: "production"
+          securityContext:
+            # SIQ-K8S-001: Privileged mode enabled
+            privileged: true
+            # SIQ-K8S-002: Running as root (UID 0)
+            runAsUser: 0
+            # SIQ-K8S-005: Privilege escalation allowed
+            allowPrivilegeEscalation: true
+            # SIQ-K8S-007: Root filesystem is writable
+            readOnlyRootFilesystem: false
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: insecure-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: insecure-app
+  ports:
+    - port: 80
+      targetPort: 80
+
+---
+
+# A second pod with different misconfigurations
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-pod
+spec:
+  hostNetwork: true
+  containers:
+    - name: debug
+      image: ubuntu
+      command: ["sleep", "infinity"]
+      env:
+        - name: SECRET_TOKEN
+          value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+      securityContext:
+        privileged: true
+        runAsUser: 0
+        allowPrivilegeEscalation: true
+
