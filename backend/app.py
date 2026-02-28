@@ -1,16 +1,24 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from src.classifier import SentinelClassifier
-from src.explainer import SentinelExplainer
-from src.remediator import SentinelRemediator
-from src.database import init_db, log_scan, get_history
-from src.advanced_ai import SentinelGNNWrapper, SentinelNERClassifier
-from src.network_security import SentinelNetworkScanner
-from src.sqi_learner import SentinelSQILearner
-from src.agentic_layers import SentinelSQIMaximizationAgent
+try:
+    from src.classifier import SentinelClassifier
+    from src.explainer import SentinelExplainer
+    from src.remediator import SentinelRemediator
+    from src.database import init_db, log_scan, get_history
+    from src.advanced_ai import SentinelGNNWrapper, SentinelNERClassifier
+    from src.network_security import SentinelNetworkScanner
+    from src.sqi_learner import SentinelSQILearner
+    from src.agentic_layers import SentinelSQIMaximizationAgent
+except ImportError:
+    from classifier import SentinelClassifier
+    from explainer import SentinelExplainer
+    from remediator import SentinelRemediator
+    from database import init_db, log_scan, get_history
+    from advanced_ai import SentinelGNNWrapper, SentinelNERClassifier
+    from network_security import SentinelNetworkScanner
+    from sqi_learner import SentinelSQILearner
+    from agentic_layers import SentinelSQIMaximizationAgent
+
 import time
 import os
-
 from functools import wraps
 
 app = Flask(__name__)
@@ -30,15 +38,21 @@ def require_api_key(f):
 # Initialize DB on startup
 init_db()
 
-# Load model and explainer
-MODEL_PATH = "f:/Fullbright Scholarship/SentinelIQ/backend/models/x-cloudsentinel-distilbert"
+# Load models using relative paths (HF environment compatible)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Check if we are in 'src' or root
+if os.path.basename(BASE_DIR) == 'src':
+    BASE_DIR = os.path.dirname(BASE_DIR)
+
+MODEL_PATH = os.path.join(BASE_DIR, "models", "x-cloudsentinel-distilbert")
+GNN_MODEL_PATH = os.path.join(BASE_DIR, "models", "x-cloudsentinel-gnn.pt")
+NER_MODEL_PATH = os.path.join(BASE_DIR, "models", "x-cloudsentinel-ner")
+
 classifier = SentinelClassifier(MODEL_PATH)
 explainer = SentinelExplainer(classifier)
 remediator = None # Initialize lazily to speed up startup
 
-# Phase 6 Advanced Models
-GNN_MODEL_PATH = "f:/Fullbright Scholarship/SentinelIQ/backend/models/x-cloudsentinel-gnn.pt"
-NER_MODEL_PATH = "f:/Fullbright Scholarship/SentinelIQ/backend/models/x-cloudsentinel-ner"
+# Phase 6 Advanced Models (SOTA)
 gnn_analyzer = SentinelGNNWrapper(GNN_MODEL_PATH)
 ner_analyzer = SentinelNERClassifier(NER_MODEL_PATH)
 network_scanner = SentinelNetworkScanner()
@@ -48,8 +62,8 @@ sqi_agent = SentinelSQIMaximizationAgent()
 @app.route('/', methods=['GET'])
 def index():
     return jsonify({
-        "message": "Welcome to X-CloudSentinel AI Backend (Secure Mode)",
-        "version": "1.0.0",
+        "message": "Welcome to X-CloudSentinel AI Backend (Secure Cloud Mode)",
+        "version": "1.1.0",
         "endpoints": ["/health", "/analyze", "/explain", "/history", "/remediate"]
     })
 
