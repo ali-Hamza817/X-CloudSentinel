@@ -3,7 +3,7 @@
   "displayName": "X-CloudSentinel",
   "description": "AI-powered cloud security analysis, secret leakage detection, and IaC misconfiguration scanning with Security Quality Index (SQI)",
   "version": "0.1.0",
-  "publisher": "X-CloudSentinel",
+  "publisher": "ali-Hamza817",
   "engines": {
     "vscode": "^1.80.0"
   },
